@@ -1,5 +1,8 @@
 package org.gallant.algorithm;
 
+import static org.gallant.algorithm.SortUtil.print;
+import static org.gallant.algorithm.SortUtil.println;
+
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 import java.util.Arrays;
@@ -33,7 +36,8 @@ public class Sorts {
     }
 
     /**
-     * 希尔排序 基于选择排序，步进按照数组长度每次/2
+     * 希尔排序 基于选择排序（可以进一步优化选择排序，可以使用一个临时变量，最终选择最小值时再发生一次交换数据即可）
+     * 步进按照数组长度每次/2
      * @param array :
      */
     private static void shellSort0(int[] array) {
@@ -225,11 +229,7 @@ public class Sorts {
     }
 
     public static void main(String[] args) {
-        int size = 15;
-        int[] array = new int[size];
-        for (int i=0;i<size;i++) {
-            array[i] = (int)(Math.random()*100+i);
-        }
+        int[] array = SortUtil.randomArray(15);
         println("---排序开始---");
         insertSort(array);
         println("---插入排序结束---");
@@ -246,14 +246,6 @@ public class Sorts {
         mergeSort2(array);
         println("---归并递归排序结束---");
         println("---排序结束---");
-    }
-
-    public static void println(Object o) {
-        System.out.println(o);
-    }
-
-    public static void print(Object o) {
-        System.out.print(o);
     }
 
 }
