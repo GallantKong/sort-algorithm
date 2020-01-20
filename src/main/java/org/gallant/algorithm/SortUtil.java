@@ -3,7 +3,7 @@ package org.gallant.algorithm;
 import com.google.common.primitives.Ints;
 
 /**
- * @author kongyong
+ * @author 会灰翔的灰机
  * @date 2020/1/20
  */
 public class SortUtil {
