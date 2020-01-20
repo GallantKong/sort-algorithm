@@ -19,7 +19,7 @@ public class Sorts {
      * 插入排序
      * @param array :
      */
-    private static void insertSort(int[] array) {
+    public static void insertSort(int[] array) {
         println(Ints.asList(array));
         for (int i=1;i<array.length;i++) {
             int valueI = array[i];
